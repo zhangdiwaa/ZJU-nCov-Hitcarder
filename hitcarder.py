@@ -178,11 +178,13 @@ def main(username, password):
         username: (str) 浙大统一认证平台用户名（一般为学号）
         password: (str) 浙大统一认证平台密码
     """
+    print("[Time] %s" % datetime.datetime.now().strftime(
+        '%Y-%m-%d %H:%M:%S'))
     sleep_time = random.randint(0,3600)
     for i in range(sleep_time):
         time.sleep(1)
     hit_carder = HitCarder(username, password)
-    print("[Time] %s" % datetime.datetime.now().strftime(
+    print("[Start Time] %s" % datetime.datetime.now().strftime(
         '%Y-%m-%d %H:%M:%S'))
     print(datetime.datetime.utcnow() + datetime.timedelta(hours=+8))
     print("打卡任务启动")
